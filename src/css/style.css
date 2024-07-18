@@ -1,0 +1,179 @@
+/* ------------------------- Reset ------------------------- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* ------------------------- Root ------------------------- */
+
+:root {
+  --color-primary: #219f95;
+  --color-secondary: #afcedd;
+  --color-text-primary: #1e1e1e;
+  --color-text-secondary: #234894;
+  --color-text-003: #696969;
+  --color-white: #fff;
+}
+
+/* ---------------------- Typography --------------------- */
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+/* ------------------------- button ------------------------- */
+
+.btn {
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: gainsboro;
+}
+
+.btn--primary {
+  max-width: 15rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.btn--primary:hover{
+  box-shadow: 0 0 20px 5px #219f9538;
+  transform: scale(1.05);
+  transition: all 0.2s;
+}
+
+/* --------------------- request ---------------------------- */
+.container {
+  margin: 10rem 4rem;
+}
+
+.request {
+  display: flex;
+  flex-direction: column;
+}  
+
+.request__header {
+  margin-bottom: 6rem;
+}  
+
+.request__header h2{
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+
+.request__body {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 4rem;
+  column-gap: 4rem;
+}  
+
+.request__body__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: start;
+  row-gap: 1.2rem;
+  background-color: rgba(245, 245, 245, 0.801);
+  padding: 2rem;
+  border-radius: 20px;
+}  
+
+.request__body__card:hover{
+  background-color: #efefef;
+}
+
+
+.request__body__card__text {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}  
+.request__body__card__text p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--color-text-003);
+}  
+.request__body__card__date {
+  color: var(--color-text-003);
+  font-size: 1.2rem;
+  justify-self: end;
+}  
+
+.request__body__card__button {
+  justify-self: end;
+}  
+
+.request__body__card__profile {
+  display: flex;
+  align-items: center;
+}  
+
+.request img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10px;
+  margin-left: 1rem;
+}  
+
+.request__body__card__profile p {
+  font-weight: 700;
+  font-size: 1.6rem;
+}  
+
+.request__body__card__title {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}  
+
+.request__body__card__title__number {
+  margin-left: 1rem;
+  /* max-width: 4rem; */
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  background-color: var(--color-secondary);
+  color: var(--color-text-secondary);
+  font-size: 1.8rem;
+  font-weight: bold;
+}  
+
+.request__body__card__title p{
+  color:var(--color-text-secondary);
+  font-weight: 700;
+}  
+
+@media screen and (min-width: 836px) {
+  .request__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1233px) {
+  .request__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
